@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  min-width: 375px;
+  background: linear-gradient(120deg, #2b1055, #7597de);
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+}
+header ul li {
+  list-style: none;
+  margin: 0 35px;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 12px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+header ul li a span {
+  background: #fff;
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: ease-in 0.3s;
+}
+header ul li a:hover {
+  color: #2b1055;
+}
+header ul li a:hover span {
+  width: 100%;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#text {
+  font-family: "Dancing Script", cursive;
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7em;
+  z-index: 1;
+  bottom: -200px;
+}
+
+.mountains {
+  z-index: 2;
+}
+
+#astronaut {
+  width: 20%;
+  height: 28%;
+  left: 35px;
+  z-index: 12;
+  transform: rotateZ(-40deg);
+  filter: drop-shadow(-22px -12px 7px rgba(0, 0, 0, 0.5));
+  animation: astronaut 5s infinite alternate-reverse;
+}
+
+#stars {
+  transform: scale(1.09, 1.09);
+}
+
+.moon {
+  mix-blend-mode: screen;
+}
+
+.blog::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #251046, transparent, transparent);
+  z-index: 40;
+}
+
+.text-blog {
+  position: relative;
+  padding: 100px;
+  background: #251046;
+  color: #fff;
+  z-index: 39;
+  text-align: center;
+}
+.text-blog .tytul {
+  font-size: 24px;
+  font-weight: 900;
+}
+.text-blog .form-control {
+  border: none;
+  transition: 0.2s ease-in;
+}
+.text-blog .form-control:focus {
+  filter: drop-shadow(0 0 1rem #935ceb);
+  box-shadow: none;
+}
+.text-blog .btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: #fff;
+  transition: 0.1s ease;
+}
+.text-blog .btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 0 0.5rem #5b3892);
+}
+.text-blog .mainBg {
+  padding: 15px 0;
+  border-radius: 18px;
+  background-color: #5b389236;
+}
+.text-blog .mainBg .postContainer {
+  padding: 20px 30px;
+  margin: 30px 200px 30px 200px;
+  text-align: left;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #688ac9);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(#254f9c, #1f4385);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+@-webkit-keyframes astronaut {
+  from {
+    transform: translateY(20px) rotateZ(-40deg);
+  }
+  to {
+    transform: translateY(0) rotateZ(20deg);
+  }
+}
+
+@keyframes astronaut {
+  from {
+    transform: translateY(20px) rotateZ(-40deg);
+  }
+  to {
+    transform: translateY(0) rotateZ(20deg);
+  }
+}
+@media (max-width: 1600px) {
+  #astronaut {
+    left: 50px;
+    height: 22%;
+  }
+
+  #text {
+    font-size: 5em;
+  }
+}
+@media (max-width: 1440px) {
+  #astronaut {
+    height: 20%;
+    left: 110px;
+  }
+
+  #text {
+    font-size: 5rem;
+  }
+}
+@media (max-height: 600px) {
+  .moon {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 840px) {
+  #text {
+    font-size: 5rem;
+  }
+
+  .logo {
+    display: block;
+    align-self: center;
+  }
+}
+@media (max-width: 800px) {
+  header {
+    padding: 2px 2px;
+    display: block;
+    text-align: center;
+  }
+  header ul {
+    margin-top: 50px;
+    padding-left: 0;
+  }
+  header ul li {
+    margin: 0 30px;
+  }
+  header ul a {
+    padding: 3px 6px;
+    flex-wrap: wrap;
+  }
+
+  .moon {
+    margin-top: 120px;
+  }
+
+  #text {
+    font-size: 5rem;
+  }
+
+  #astronaut {
+    height: 18%;
+    top: -35px;
+    left: 370px;
+  }
+}
+@media (max-width: 680px) {
+  #astronaut {
+    left: 320px;
+  }
+}
+@media (max-width: 480px) {
+  header ul li {
+    margin: 0 20px;
+  }
+
+  #astronaut {
+    left: 240px;
+  }
+}
+@media (max-width: 375px) {
+  #text {
+    font-size: 3rem;
+  }
+
+  #astronaut {
+    height: 13%;
+    top: -20px;
+    left: 180px;
+  }
+
+  .moon {
+    margin-top: 120px;
+  }
+
+  header {
+    padding: 2px 2px;
+    display: block;
+    text-align: center;
+  }
+  header ul {
+    padding-left: 0;
+  }
+  header ul li {
+    margin: 0 3px;
+  }
+  header ul a {
+    padding: 3px 6px;
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=main.css.map */

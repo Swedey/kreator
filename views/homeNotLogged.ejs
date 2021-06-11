@@ -1,0 +1,77 @@
+<%- include("partials/header") -%>
+
+<header>
+      <a href="#" class="logo"><img width="120em" src="images/Logo-white.svg" alt="Logo"></a>
+<ul>
+   <li><a href="#"><span></span> Home</a></li>
+   <li><a href="#"><span></span> About</a></li>
+   <li><a href="#"><span></span> Contact</a></li>
+   <li><a href="/signin"><span></span> Log In</a></li>
+</ul>
+
+</header>
+
+<section class="main">
+   <img src="images/astronaut.png" id="astronaut" alt="astronauta">
+   <img src="images/stars.png" id="stars" alt="stars">
+   <img src="images/moon_try2.png" id="moonImg" class="moon" alt="moon">
+   <h2 id="text">Your Hobby</h2>
+   <img src="images/mountains.svg" id="mountainsImg" class="mountains" alt="mountains">
+
+
+</section>
+
+<section class="blog">
+   <div class="text-blog">
+
+      <div class="mainBg">
+     
+         <form action="/" method="POST">
+
+            <div class="mb-3">
+               <label for="postTitle" class="form-label"><span class="tytul">Title</span></label>
+               <input style="width: 25%; text-align: center; margin: auto; border-radius: 12px; color: #fff; background: rgba(255, 255, 255, 0.3);" type="text" name="postTitle" class="form-control">
+            </div>
+ 
+            <div class="mb-3 blogPost">
+               <label for="postBody" class="form-label"><span class="tytul">Post</span></label>
+               <textarea style="width: 50%; margin: auto;  border-radius: 24px; resize: none; color: #fff; background: rgba(255, 255, 255, 0.3);" name="postBody" class="form-control" rows="7"></textarea>
+            </div>
+ 
+            <button style="margin-top: 10px;" class="btn btn-primary" type="submit" name="button">Publish!</button>
+ 
+         </form>
+
+         <div class="postContainer">
+
+            <% newContent.forEach((post)=>{ %>
+               <h1><%= post.title %></h1>
+               <p><%= post.content %></p>
+            <% }); %>
+
+         </div>
+         
+      
+      </div>
+      
+   </div>
+</section>
+
+<script>
+
+   let stars = document.getElementById('stars');
+   let mountains = document.getElementById('mountainsImg');
+   let moon = document.getElementById('moonImg');
+   let text = document.getElementById('text');
+
+   window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      stars.style.left = value*0.2+"px";
+      mountains.style.top = value*0.15+"px";
+      moon.style.left = -value*0.25+"px";
+      text.style.marginBottom = value*0.9+"px"
+   });
+   
+</script>
+
+<%- include("partials/footer") -%>

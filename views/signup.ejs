@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/Logo-Black.svg"/>
+  <link href="/css/style-log.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <title>Kreator-Moje Hobby</title>
+
+<style>
+   .bd-placeholder-img {
+     font-size: 1.125rem;
+     text-anchor: middle;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     user-select: none;
+   }
+
+   @media (min-width: 768px) {
+     .bd-placeholder-img-lg {
+       font-size: 3.5rem;
+     }
+   }
+ </style>
+
+
+</head>
+<body class="text-center">
+ 
+<main class="form-signin">
+<form action="/signup" method="post">
+ <img class="mb-4" style="border-radius: 20px;" src="/images/Logo-Black.svg" alt="img" width="120" height="120">
+ <h1 class="h3 mb-3 fw-normal" style="color: #000">Sign Up!</h1>
+ <input type="text" class="form-controle top" name="Name" placeholder="User Name" required autofocus>
+ <input type="email" class="form-controle bottom" name="Email" placeholder="Email">
+ <input type="password" class="form-controle middle" name="Password" placeholder="Password" required>
+ <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+
+ 
+ <p class="mt-5 mb-3 text-muted">&copy; Kreator 2021</p>
+</form>
+</main>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+<%- include("partials/footer") -%>
